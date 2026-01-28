@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cap Santé - Mes ateliers</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-circle"></div>
+                <div class="logo-text">
+                    <span class="logo-cap">CAP</span>
+                    <span class="logo-sante">SANTÉ</span>
+                </div>
+            </div>
+
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="ateliers.html" class="nav-link active">Mes ateliers</a>
+            </nav>
+
+            <div class="user-section">
+                <button class="recent-btn">
+                    Récent <i class="fas fa-chevron-down"></i>
+                </button>
+                <button class="notif-btn">
+                    <i class="fas fa-bell"></i>
+                </button>
+                <button class="user-btn">
+                    <span class="user-avatar">PG</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <button class="settings-btn">
+                    <i class="fas fa-cog"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Greeting -->
+            <div class="greeting">
+                <h1>Bonjour Pierre ! 👋</h1>
+            </div>
+
+            <!-- Tabs -->
+            <div class="tabs-section">
+                <h2 class="tabs-title">Vue d'ensemble des ateliers</h2>
+                <div class="tabs">
+                    <button class="tab active">Tout</button>
+                    <button class="tab">En cours</button>
+                    <button class="tab">À venir</button>
+                    <button class="tab">Passés</button>
+                    <button class="tab">Favoris</button>
+                    <button class="tab">Retirés de l'affichage</button>
+                </div>
+            </div>
+
+            <!-- Toolbar -->
+            <div class="toolbar">
+                <select class="sort-select">
+                    <option>Trier par nom d'atelier</option>
+                </select>
+                <div class="toolbar-right">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i> Rechercher
+                    </button>
+                    <button class="view-btn active">
+                        <i class="fas fa-th"></i>
+                    </button>
+                    <button class="view-btn">
+                        <i class="fas fa-list"></i>
+                    </button>
+                    <button class="view-btn">
+                        <i class="fas fa-table-cells"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Course Cards -->
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-image">
+                        <img src="https://via.placeholder.com/300x200/8BC34A/FFFFFF?text=Le+trouble+borderline" alt="Trouble Borderline">
+                        <span class="course-badge">Le trouble borderline</span>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-title">Trouble Borderline</h3>
+                        <a href="cours.html" class="btn-outline">Voir le cours</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col footer-description">
+                <h3 class="footer-title">CAP SANTÉ</h3>
+                <p>Cap Santé est une plateforme numérique d'e-prévention et e-éducation conçue par le CHU de Bordeaux, hébergeant des contenus en ligne d'éducation pour la santé et d'éducation thérapeutique (ETP) validés par des spécialistes.</p>
+                <p>Son objectif est d'aider les personnes à acquérir des compétences pour gérer leur santé tout au long de la vie.</p>
+                <p>Les e-programmes éducatifs présents dans Cap Santé sont proposés :</p>
+                <ul class="footer-list">
+                    <li>Aux personnes atteintes de maladies chroniques</li>
+                    <li>À toutes les personnes souhaitant préserver leur santé</li>
+                    <li>Ils aident les personnes à :</li>
+                    <li>Développer des comportements adaptés dans leur quotidien</li>
+                    <li>Réduire les risques pour la santé.</li>
+                </ul>
+
+                <div class="footer-logo">
+                    <div class="chu-logo">
+                        <div class="chu-logo-box">CHU</div>
+                        <div class="chu-logo-text">
+                            <span>Hôpitaux</span>
+                            <span>Universitaires</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-col footer-contact">
+                <h3 class="footer-title">Un problème ? Contactez nous !</h3>
+                <a href="mailto:capsante@chu-bordeaux.fr" class="footer-email">capsante@chu-bordeaux.fr</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="#" class="footer-link">Privacy Policy</a>
+            <a href="#" class="footer-link">Terms & Conditions</a>
+        </div>
+    </footer>
+</body>
+</html>
