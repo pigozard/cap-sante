@@ -3,140 +3,539 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cap Santé - Mes ateliers</title>
+    <title>Cap Santé - Mon programme</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <!-- HEADER -->
+    <!-- HEADER (cohérent avec index) -->
     <header class="header">
         <div class="header-container">
-            <div class="logo">
-                <div class="logo-circle"></div>
-                <div class="logo-text">
-                    <span class="logo-cap">CAP</span>
-                    <span class="logo-sante">SANTÉ</span>
-                </div>
-            </div>
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo-cap-sante.png" alt="Cap Santé - Retour à l'accueil" class="logo-img">
+            </a>
 
-            <nav class="nav">
-                <a href="index.html" class="nav-link">Accueil</a>
-                <a href="ateliers.html" class="nav-link active">Mes ateliers</a>
+            <nav class="nav" aria-label="Navigation principale">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Accueil</span>
+                </a>
+                <a href="ateliers.html" class="nav-link active" aria-current="page">
+                    <i class="fas fa-book-open"></i>
+                    <span>Mon programme</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Aide</span>
+                </a>
             </nav>
 
             <div class="user-section">
-                <button class="recent-btn">
-                    Récent <i class="fas fa-chevron-down"></i>
-                </button>
-                <button class="notif-btn">
+                <button class="icon-btn" aria-label="Notifications">
                     <i class="fas fa-bell"></i>
+                    <span class="notif-badge">2</span>
                 </button>
-                <button class="user-btn">
-                    <span class="user-avatar">PG</span>
+                <div class="user-profile">
+                    <span class="user-avatar">P</span>
+                    <span class="user-name">Pierre D.</span>
                     <i class="fas fa-chevron-down"></i>
-                </button>
-                <button class="settings-btn">
-                    <i class="fas fa-cog"></i>
-                </button>
+                </div>
             </div>
         </div>
     </header>
 
     <!-- MAIN CONTENT -->
-    <main class="main-content">
+    <main class="main-content dashboard-content">
         <div class="container">
-            <!-- Greeting -->
-            <div class="greeting">
-                <h1>Bonjour Pierre ! 👋</h1>
-            </div>
-
-            <!-- Tabs -->
-            <div class="tabs-section">
-                <h2 class="tabs-title">Vue d'ensemble des ateliers</h2>
-                <div class="tabs">
-                    <button class="tab active">Tout</button>
-                    <button class="tab">En cours</button>
-                    <button class="tab">À venir</button>
-                    <button class="tab">Passés</button>
-                    <button class="tab">Favoris</button>
-                    <button class="tab">Retirés de l'affichage</button>
+            <!-- Greeting Section avec contexte -->
+            <div class="dashboard-greeting">
+                <div class="greeting-text">
+                    <h1 class="greeting-title">Bonjour Pierre ! 👋</h1>
+                    <p class="greeting-subtitle">Reprenez votre parcours là où vous l'avez laissé</p>
                 </div>
-            </div>
-
-            <!-- Toolbar -->
-            <div class="toolbar">
-                <select class="sort-select">
-                    <option>Trier par nom d'atelier</option>
-                </select>
-                <div class="toolbar-right">
-                    <button class="search-btn">
-                        <i class="fas fa-search"></i> Rechercher
-                    </button>
-                    <button class="view-btn active">
-                        <i class="fas fa-th"></i>
-                    </button>
-                    <button class="view-btn">
-                        <i class="fas fa-list"></i>
-                    </button>
-                    <button class="view-btn">
-                        <i class="fas fa-table-cells"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Course Cards -->
-            <div class="courses-grid">
-                <div class="course-card">
-                    <div class="course-image">
-                        <img src="https://via.placeholder.com/300x200/8BC34A/FFFFFF?text=Le+trouble+borderline" alt="Trouble Borderline">
-                        <span class="course-badge">Le trouble borderline</span>
+                <div class="greeting-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-trophy"></i>
+                        <div>
+                            <span class="stat-value">45%</span>
+                            <span class="stat-label">Progression</span>
+                        </div>
                     </div>
-                    <div class="course-content">
-                        <h3 class="course-title">Trouble Borderline</h3>
-                        <a href="cours.html" class="btn-outline">Voir le cours</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-col footer-description">
-                <h3 class="footer-title">CAP SANTÉ</h3>
-                <p>Cap Santé est une plateforme numérique d'e-prévention et e-éducation conçue par le CHU de Bordeaux, hébergeant des contenus en ligne d'éducation pour la santé et d'éducation thérapeutique (ETP) validés par des spécialistes.</p>
-                <p>Son objectif est d'aider les personnes à acquérir des compétences pour gérer leur santé tout au long de la vie.</p>
-                <p>Les e-programmes éducatifs présents dans Cap Santé sont proposés :</p>
-                <ul class="footer-list">
-                    <li>Aux personnes atteintes de maladies chroniques</li>
-                    <li>À toutes les personnes souhaitant préserver leur santé</li>
-                    <li>Ils aident les personnes à :</li>
-                    <li>Développer des comportements adaptés dans leur quotidien</li>
-                    <li>Réduire les risques pour la santé.</li>
-                </ul>
-
-                <div class="footer-logo">
-                    <div class="chu-logo">
-                        <div class="chu-logo-box">CHU</div>
-                        <div class="chu-logo-text">
-                            <span>Hôpitaux</span>
-                            <span>Universitaires</span>
+                    <div class="stat-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <span class="stat-value">3h 15min</span>
+                            <span class="stat-label">Temps passé</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="footer-col footer-contact">
-                <h3 class="footer-title">Un problème ? Contactez nous !</h3>
-                <a href="mailto:capsante@chu-bordeaux.fr" class="footer-email">capsante@chu-bordeaux.fr</a>
+            <!-- Alert/Info Box -->
+            <div class="info-alert info-alert-primary">
+                <i class="fas fa-info-circle"></i>
+                <div>
+                    <strong>Programme validé par votre équipe soignante</strong>
+                    <p>Ce programme a été sélectionné spécifiquement pour vous accompagner dans votre parcours de santé.</p>
+                </div>
+            </div>
+
+            <!-- Mon Programme Principal -->
+            <section class="my-program-section">
+                <div class="section-header-inline">
+                    <h2 class="section-title-small">Mon programme actuel</h2>
+                </div>
+
+                <div class="program-hero-card">
+                    <div class="program-hero-image">
+                        <img src="https://via.placeholder.com/800x300/8e44ad/FFFFFF?text=Trouble+Borderline" alt="Programme Trouble Borderline">
+                        <div class="program-hero-badge">
+                            <i class="fas fa-brain"></i>
+                            <span>Santé mentale</span>
+                        </div>
+                    </div>
+
+                    <div class="program-hero-content">
+                        <div class="program-hero-header">
+                            <div>
+                                <h2 class="program-hero-title">Trouble Borderline</h2>
+                                <p class="program-hero-subtitle">Comprendre et gérer les émotions : outils pratiques et stratégies d'adaptation</p>
+                            </div>
+                            <a href="cours.html" class="btn-primary">
+                                <span>Continuer le cours</span>
+                                <i class="fas fa-play"></i>
+                            </a>
+                        </div>
+
+                        <!-- Progress Bar -->
+                        <div class="progress-section">
+                            <div class="progress-header">
+                                <span class="progress-label">Votre progression</span>
+                                <span class="progress-percentage">45%</span>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill" style="width: 45%"></div>
+                            </div>
+                            <p class="progress-text">5 modules sur 10 complétés</p>
+                        </div>
+
+                        <!-- Quick Stats -->
+                        <div class="program-quick-stats">
+                            <div class="quick-stat-item">
+                                <i class="fas fa-book"></i>
+                                <span>10 modules</span>
+                            </div>
+                            <div class="quick-stat-item">
+                                <i class="fas fa-clock"></i>
+                                <span>~5 heures</span>
+                            </div>
+                            <div class="quick-stat-item">
+                                <i class="fas fa-certificate"></i>
+                                <span>Certificat inclus</span>
+                            </div>
+                            <div class="quick-stat-item">
+                                <i class="fas fa-user-md"></i>
+                                <span>Validé CHU Bordeaux</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Modules / Chapitres -->
+            <section class="modules-section">
+                <div class="section-header-inline">
+                    <h2 class="section-title-small">Contenu du programme</h2>
+                    <div class="section-actions">
+                        <button class="btn-text">
+                            <i class="fas fa-expand"></i> Tout déplier
+                        </button>
+                    </div>
+                </div>
+
+                <div class="modules-list">
+                    <!-- Module 1 - Complété -->
+                    <div class="module-item module-completed">
+                        <div class="module-header">
+                            <div class="module-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="module-info">
+                                <h3 class="module-title">Module 1 : Introduction au trouble borderline</h3>
+                                <div class="module-meta">
+                                    <span><i class="fas fa-video"></i> 3 vidéos</span>
+                                    <span><i class="fas fa-file-alt"></i> 2 documents</span>
+                                    <span><i class="fas fa-tasks"></i> 1 quiz</span>
+                                    <span><i class="fas fa-clock"></i> 30 min</span>
+                                </div>
+                            </div>
+                            <div class="module-actions">
+                                <span class="module-status module-status-done">Terminé</span>
+                                <button class="btn-icon" aria-label="Détails du module">
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                      <!-- Bouton pour afficher modules verrouillés -->
+                <div class="modules-show-all">
+                    <button class="btn-text" onclick="showAllModules()">
+                        <i class="fas fa-eye"></i> Voir le programme complet (5 modules à venir)
+                    </button>
+                </div>
+            </section>
+
+                    <!-- Module 2 - Complété -->
+                    <div class="module-item module-completed">
+                        <div class="module-header">
+                            <div class="module-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="module-info">
+                                <h3 class="module-title">Module 2 : Comprendre les émotions</h3>
+                                <div class="module-meta">
+                                    <span><i class="fas fa-video"></i> 4 vidéos</span>
+                                    <span><i class="fas fa-file-alt"></i> 3 documents</span>
+                                    <span><i class="fas fa-clock"></i> 45 min</span>
+                                </div>
+                            </div>
+                            <div class="module-actions">
+                                <span class="module-status module-status-done">Terminé</span>
+                                <button class="btn-icon">
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Module 3 - Complété -->
+                    <div class="module-item module-completed">
+                        <div class="module-header">
+                            <div class="module-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="module-info">
+                                <h3 class="module-title">Module 3 : La régulation émotionnelle</h3>
+                                <div class="module-meta">
+                                    <span><i class="fas fa-video"></i> 5 vidéos</span>
+                                    <span><i class="fas fa-file-alt"></i> 4 documents</span>
+                                    <span><i class="fas fa-tasks"></i> 2 quiz</span>
+                                    <span><i class="fas fa-clock"></i> 1h</span>
+                                </div>
+                            </div>
+                            <div class="module-actions">
+                                <span class="module-status module-status-done">Terminé</span>
+                                <button class="btn-icon">
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Module 4 - Complété -->
+                    <div class="module-item module-completed">
+                        <div class="module-header">
+                            <div class="module-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="module-info">
+                                <h3 class="module-title">Module 4 : Les relations interpersonnelles</h3>
+                                <div class="module-meta">
+                                    <span><i class="fas fa-video"></i> 4 vidéos</span>
+                                    <span><i class="fas fa-file-alt"></i> 3 documents</span>
+                                    <span><i class="fas fa-clock"></i> 40 min</span>
+                                </div>
+                            </div>
+                            <div class="module-actions">
+                                <span class="module-status module-status-done">Terminé</span>
+                                <button class="btn-icon">
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Module 5 - Complété -->
+                    <div class="module-item module-completed">
+                        <div class="module-header">
+                            <div class="module-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="module-info">
+                                <h3 class="module-title">Module 5 : Techniques de pleine conscience</h3>
+                                <div class="module-meta">
+                                    <span><i class="fas fa-video"></i> 6 vidéos</span>
+                                    <span><i class="fas fa-headphones"></i> 3 audios</span>
+                                    <span><i class="fas fa-file-alt"></i> 2 documents</span>
+                                    <span><i class="fas fa-clock"></i> 50 min</span>
+                                </div>
+                            </div>
+                            <div class="module-actions">
+                                <span class="module-status module-status-done">Terminé</span>
+                                <button class="btn-icon">
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Module 6 - En cours -->
+                    <div class="module-item module-current">
+                        <div class="module-header">
+                            <div class="module-icon">
+                                <i class="fas fa-play-circle"></i>
+                            </div>
+                            <div class="module-info">
+                                <h3 class="module-title">Module 6 : Gestion du stress et de l'anxiété</h3>
+                                <div class="module-meta">
+                                    <span><i class="fas fa-video"></i> 5 vidéos</span>
+                                    <span><i class="fas fa-file-alt"></i> 3 documents</span>
+                                    <span><i class="fas fa-tasks"></i> 2 quiz</span>
+                                    <span><i class="fas fa-clock"></i> 55 min</span>
+                                </div>
+                                <div class="module-progress">
+                                    <div class="module-progress-bar">
+                                        <div class="module-progress-fill" style="width: 60%"></div>
+                                    </div>
+                                    <span class="module-progress-text">60% complété</span>
+                                </div>
+                            </div>
+                            <div class="module-actions">
+                                <span class="module-status module-status-current">En cours</span>
+                                <a href="cours.html" class="btn-small btn-primary-small">
+                                    <span>Continuer</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Module 7 - Verrouillé -->
+                    <div class="module-item module-locked">
+                        <div class="module-header">
+                            <div class="module-icon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="module-info">
+                                <h3 class="module-title">Module 7 : La tolérance à la détresse</h3>
+                                <div class="module-meta">
+                                    <span><i class="fas fa-video"></i> 4 vidéos</span>
+                                    <span><i class="fas fa-file-alt"></i> 2 documents</span>
+                                    <span><i class="fas fa-clock"></i> 45 min</span>
+                                </div>
+                            </div>
+                            <div class="module-actions">
+                                <span class="module-status module-status-locked">Verrouillé</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Module 8 - Verrouillé -->
+                    <div class="module-item module-locked">
+                        <div class="module-header">
+                            <div class="module-icon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="module-info">
+                                <h3 class="module-title">Module 8 : Construire une vie qui vaut la peine</h3>
+                                <div class="module-meta">
+                                    <span><i class="fas fa-video"></i> 5 vidéos</span>
+                                    <span><i class="fas fa-file-alt"></i> 3 documents</span>
+                                    <span><i class="fas fa-clock"></i> 50 min</span>
+                                </div>
+                            </div>
+                            <div class="module-actions">
+                                <span class="module-status module-status-locked">Verrouillé</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Module 9 - Verrouillé -->
+                    <div class="module-item module-locked">
+                        <div class="module-header">
+                            <div class="module-icon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="module-info">
+                                <h3 class="module-title">Module 9 : Prévention des rechutes</h3>
+                                <div class="module-meta">
+                                    <span><i class="fas fa-video"></i> 4 vidéos</span>
+                                    <span><i class="fas fa-file-alt"></i> 4 documents</span>
+                                    <span><i class="fas fa-tasks"></i> 1 quiz</span>
+                                    <span><i class="fas fa-clock"></i> 40 min</span>
+                                </div>
+                            </div>
+                            <div class="module-actions">
+                                <span class="module-status module-status-locked">Verrouillé</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Module 10 - Verrouillé -->
+                    <div class="module-item module-locked">
+                        <div class="module-header">
+                            <div class="module-icon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="module-info">
+                                <h3 class="module-title">Module 10 : Bilan et perspectives</h3>
+                                <div class="module-meta">
+                                    <span><i class="fas fa-video"></i> 3 vidéos</span>
+                                    <span><i class="fas fa-certificate"></i> Certificat</span>
+                                    <span><i class="fas fa-clock"></i> 35 min</span>
+                                </div>
+                            </div>
+                            <div class="module-actions">
+                                <span class="module-status module-status-locked">Verrouillé</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ressources complémentaires -->
+            <section class="resources-section">
+                <div class="section-header-inline">
+                    <h2 class="section-title-small">Ressources complémentaires</h2>
+                </div>
+
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="resource-content">
+                            <h3 class="resource-title">Guide pratique - Exercices quotidiens</h3>
+                            <p class="resource-desc">Document PDF à télécharger avec des exercices pratiques</p>
+                            <a href="#" class="resource-link">
+                                <i class="fas fa-download"></i> Télécharger (2.5 MB)
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-headphones"></i>
+                        </div>
+                        <div class="resource-content">
+                            <h3 class="resource-title">Méditations guidées</h3>
+                            <p class="resource-desc">Collection de 5 méditations audio pour la régulation émotionnelle</p>
+                            <a href="#" class="resource-link">
+                                <i class="fas fa-play"></i> Écouter
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <div class="resource-content">
+                            <h3 class="resource-title">Liens utiles</h3>
+                            <p class="resource-desc">Associations, groupes de soutien et ressources externes</p>
+                            <a href="#" class="resource-link">
+                                <i class="fas fa-external-link-alt"></i> Consulter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Contact équipe -->
+            <div class="contact-cta">
+                <div class="contact-cta-icon">
+                    <i class="fas fa-user-md"></i>
+                </div>
+                <div class="contact-cta-content">
+                    <h3>Une question sur votre programme ?</h3>
+                    <p>N'hésitez pas à en parler avec votre équipe soignante ou à nous contacter pour toute question technique.</p>
+                </div>
+                <a href="mailto:capsante@chu-bordeaux.fr" class="btn-secondary">
+                    <i class="fas fa-envelope"></i>
+                    <span>Nous contacter</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER (cohérent avec index) -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col footer-main">
+                <div class="footer-logo-section">
+                    <h3 class="footer-brand">CAP SANTÉ</h3>
+                    <p class="footer-tagline">Votre santé, notre engagement</p>
+                </div>
+
+                <p class="footer-description">Cap Santé est une plateforme numérique d'éducation thérapeutique développée par le CHU de Bordeaux. Nos contenus, validés par des experts médicaux, vous aident à développer des compétences pour mieux gérer votre santé au quotidien.</p>
+
+                <div class="footer-chu-logo">
+                    <div class="chu-logo">
+                        <div class="chu-logo-box">CHU</div>
+                        <div class="chu-logo-text">
+                            <span>Hôpitaux</span>
+                            <span>Universitaires</span>
+                            <span class="chu-logo-city">de Bordeaux</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-col footer-links">
+                <h4 class="footer-col-title">Navigation</h4>
+                <ul class="footer-nav">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="ateliers.html">Mon programme</a></li>
+                    <li><a href="#">Aide & FAQ</a></li>
+                    <li><a href="#">Accessibilité</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-contact-col">
+                <h4 class="footer-col-title">Besoin d'aide ?</h4>
+                <div class="footer-contact-info">
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <p class="footer-contact-label">Email</p>
+                            <a href="mailto:capsante@chu-bordeaux.fr" class="footer-contact-link">capsante@chu-bordeaux.fr</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <p class="footer-contact-label">Assistance technique</p>
+                            <p class="footer-contact-text">Du lundi au vendredi, 9h-17h</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <a href="#" class="footer-link">Privacy Policy</a>
-            <a href="#" class="footer-link">Terms & Conditions</a>
+            <p class="footer-copyright">&copy; 2025 CHU de Bordeaux - Tous droits réservés</p>
+            <div class="footer-legal-links">
+                <a href="#">Mentions légales</a>
+                <a href="#">Politique de confidentialité</a>
+                <a href="#">Conditions d'utilisation</a>
+            </div>
         </div>
     </footer>
+    <script>
+        function showAllModules() {
+            const lockedModules = document.querySelectorAll('.module-locked');
+            const btn = document.querySelector('.modules-show-all');
+
+            lockedModules.forEach(module => {
+                module.style.display = 'block';
+            });
+
+            btn.style.display = 'none';
+        }
+    </script>
 </body>
 </html>

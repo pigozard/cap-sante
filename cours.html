@@ -6,38 +6,43 @@
     <title>Cap Santé - Trouble Borderline</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- HEADER -->
     <header class="header">
         <div class="header-container">
-            <div class="logo">
-                <div class="logo-circle"></div>
-                <div class="logo-text">
-                    <span class="logo-cap">CAP</span>
-                    <span class="logo-sante">SANTÉ</span>
-                </div>
-            </div>
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo-cap-sante.png" alt="Cap Santé - Retour à l'accueil" class="logo-img">
+            </a>
 
-            <nav class="nav">
-                <a href="index.html" class="nav-link">Accueil</a>
-                <a href="ateliers.html" class="nav-link">Mes ateliers</a>
+            <nav class="nav" aria-label="Navigation principale">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Accueil</span>
+                </a>
+                <a href="ateliers.html" class="nav-link active">
+                    <i class="fas fa-book-open"></i>
+                    <span>Mes ateliers</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Aide</span>
+                </a>
             </nav>
 
             <div class="user-section">
-                <button class="recent-btn">
-                    Récent <i class="fas fa-chevron-down"></i>
-                </button>
-                <button class="notif-btn">
+                <button class="icon-btn" aria-label="Notifications">
                     <i class="fas fa-bell"></i>
+                    <span class="notif-badge">2</span>
                 </button>
-                <button class="user-btn">
-                    <span class="user-avatar">PG</span>
+                <div class="user-profile">
+                    <span class="user-avatar">P</span>
+                    <span class="user-name">Pierre D.</span>
                     <i class="fas fa-chevron-down"></i>
-                </button>
-                <button class="settings-btn">
-                    <i class="fas fa-cog"></i>
-                </button>
+                </div>
             </div>
         </div>
     </header>
@@ -48,68 +53,96 @@
         <aside class="course-sidebar">
             <div class="sidebar-header">
                 <h3>Menu du cours</h3>
-                <button class="sidebar-close">
+                <button class="sidebar-close" aria-label="Fermer le menu">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
 
             <nav class="sidebar-nav">
+                <!-- Section Généralités -->
                 <div class="sidebar-section active">
                     <button class="sidebar-section-btn">
                         <span>Généralités</span>
-                        <i class="fas fa-chevron-up"></i>
+                        <i class="fas fa-chevron-down"></i>
                     </button>
                     <div class="sidebar-section-content">
-                        <a href="#" class="sidebar-link">Introduction</a>
+                        <a href="#introduction" class="sidebar-link active">Introduction</a>
                     </div>
                 </div>
 
+                <!-- Section 2 -->
                 <div class="sidebar-section">
                     <button class="sidebar-section-btn">
                         <span>Section 2</span>
-                        <i class="fas fa-chevron-up"></i>
+                        <i class="fas fa-chevron-down"></i>
                     </button>
+                    <div class="sidebar-section-content">
+                        <a href="#section2-1" class="sidebar-link">Comprendre les émotions</a>
+                        <a href="#section2-2" class="sidebar-link">Types d'émotions</a>
+                    </div>
                 </div>
 
+                <!-- Section 3 -->
                 <div class="sidebar-section">
                     <button class="sidebar-section-btn">
                         <span>Section 3</span>
-                        <i class="fas fa-chevron-up"></i>
+                        <i class="fas fa-chevron-down"></i>
                     </button>
+                    <div class="sidebar-section-content">
+                        <a href="#section3-1" class="sidebar-link">La régulation</a>
+                        <a href="#section3-2" class="sidebar-link">Techniques pratiques</a>
+                    </div>
                 </div>
 
+                <!-- Section 4 -->
                 <div class="sidebar-section">
                     <button class="sidebar-section-btn">
                         <span>Section 4</span>
-                        <i class="fas fa-chevron-up"></i>
+                        <i class="fas fa-chevron-down"></i>
                     </button>
+                    <div class="sidebar-section-content">
+                        <a href="#section4-1" class="sidebar-link">Relations interpersonnelles</a>
+                    </div>
                 </div>
 
+                <!-- Section 5 -->
                 <div class="sidebar-section">
                     <button class="sidebar-section-btn">
                         <span>Section 5</span>
-                        <i class="fas fa-chevron-up"></i>
+                        <i class="fas fa-chevron-down"></i>
                     </button>
+                    <div class="sidebar-section-content">
+                        <a href="#section5-1" class="sidebar-link">Pleine conscience</a>
+                    </div>
                 </div>
 
+                <!-- Section 6 -->
                 <div class="sidebar-section">
                     <button class="sidebar-section-btn">
                         <span>Section 6</span>
-                        <i class="fas fa-chevron-up"></i>
+                        <i class="fas fa-chevron-down"></i>
                     </button>
+                    <div class="sidebar-section-content">
+                        <a href="#section6-1" class="sidebar-link">Gestion du stress</a>
+                    </div>
                 </div>
             </nav>
         </aside>
 
-        <!-- MAIN COURSE CONTENT -->
+        <!-- MAIN CONTENT -->
         <main class="course-main">
             <!-- Course Banner -->
             <div class="course-banner">
-                <img src="https://via.placeholder.com/1200x300/9FA8A3/FFFFFF?text=Trouble+Borderline" alt="Trouble Borderline">
+                <img src="https://via.placeholder.com/1200x300/9fa8a3/FFFFFF?text=Le+trouble+borderline" alt="Trouble Borderline">
                 <div class="course-banner-overlay">
-                    <span class="course-banner-label">Trouble Borderline</span>
+                    <div class="course-banner-label">
+                        <i class="fas fa-play"></i>
+                        Trouble Borderline
+                    </div>
                     <h1 class="course-banner-title">Trouble Borderline</h1>
-                    <p class="course-banner-author">Clara Maria LIMA E SILVA</p>
+                    <p class="course-banner-author">
+                        <i class="fas fa-user"></i> Clara Maria LIMA E SILVA
+                    </p>
                 </div>
             </div>
 
@@ -121,11 +154,14 @@
 
             <!-- Course Content -->
             <div class="course-content">
-                <section class="course-section">
+                <!-- Section Généralités -->
+                <section class="course-section" id="generalites">
                     <h2>Généralités</h2>
 
-                    <div class="activity-section">
+                    <div class="activities-section">
                         <h3>Activités</h3>
+
+                        <!-- Video Player -->
                         <div class="video-container">
                             <div class="video-placeholder">
                                 <p>Vivre mieux avec mon trouble Borderline</p>
@@ -134,33 +170,92 @@
                                 </button>
                             </div>
                         </div>
+
+                        <!-- Course Description -->
+                        <div class="course-description">
+                            <h4>À propos de ce module</h4>
+                            <p>Ce module d'introduction vous aidera à comprendre ce qu'est le trouble de personnalité borderline, ses caractéristiques principales et comment il peut affecter votre quotidien. Vous découvrirez également les ressources disponibles et les stratégies qui peuvent vous aider.</p>
+
+                            <div class="course-meta-info">
+                                <div class="meta-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Durée : 30 minutes</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-video"></i>
+                                    <span>3 vidéos</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span>2 documents</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Documents à télécharger -->
+                        <div class="course-documents">
+                            <h4>Documents du module</h4>
+                            <div class="documents-list">
+                                <a href="#" class="document-item">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <div>
+                                        <span class="document-name">Guide - Comprendre le trouble borderline</span>
+                                        <span class="document-size">PDF, 2.5 MB</span>
+                                    </div>
+                                    <i class="fas fa-download"></i>
+                                </a>
+                                <a href="#" class="document-item">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <div>
+                                        <span class="document-name">Fiche pratique - Mes émotions</span>
+                                        <span class="document-size">PDF, 1.2 MB</span>
+                                    </div>
+                                    <i class="fas fa-download"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
-                <!-- Other Sections (collapsed) -->
-                <section class="course-section">
+                <!-- Section 2 -->
+                <section class="course-section" id="section2">
                     <h2>Section 2</h2>
+                    <p class="section-intro">Approfondissons notre compréhension des émotions et de leur rôle dans le trouble borderline.</p>
+
+                    <div class="content-block">
+                        <h3>Comprendre les émotions</h3>
+                        <p>Les émotions sont des réponses naturelles à ce qui se passe autour de nous et en nous. Dans le trouble borderline, ces émotions peuvent être particulièrement intenses et changeantes.</p>
+                    </div>
                 </section>
 
-                <section class="course-section">
+                <!-- Section 3 -->
+                <section class="course-section" id="section3">
                     <h2>Section 3</h2>
+                    <p class="section-intro">Découvrez des techniques concrètes pour réguler vos émotions au quotidien.</p>
                 </section>
 
-                <section class="course-section">
+                <!-- Section 4 -->
+                <section class="course-section" id="section4">
                     <h2>Section 4</h2>
+                    <p class="section-intro">Les relations interpersonnelles et la communication.</p>
                 </section>
 
-                <section class="course-section">
+                <!-- Section 5 -->
+                <section class="course-section" id="section5">
                     <h2>Section 5</h2>
+                    <p class="section-intro">Introduction à la pleine conscience et ses bienfaits.</p>
                 </section>
 
-                <section class="course-section">
+                <!-- Section 6 -->
+                <section class="course-section" id="section6">
                     <h2>Section 6</h2>
+                    <p class="section-intro">Gérer le stress et l'anxiété de manière efficace.</p>
                 </section>
 
                 <!-- Rating Section -->
                 <section class="rating-section">
-                    <h3>Edwiser Rating and Review</h3>
+                    <h2>Évaluer ce module</h2>
+
                     <div class="rating-container">
                         <div class="rating-summary">
                             <div class="rating-number">0</div>
@@ -171,15 +266,12 @@
                                 <i class="far fa-star"></i>
                                 <i class="far fa-star"></i>
                             </div>
-                            <p class="rating-text">0 Course Rating</p>
-                            <button class="btn-yellow">Write a Review</button>
+                            <p class="rating-text">Aucune évaluation</p>
+                            <button class="btn-yellow">Évaluer ce module</button>
                         </div>
 
                         <div class="rating-bars">
                             <div class="rating-bar-item">
-                                <div class="rating-bar">
-                                    <div class="rating-bar-fill" style="width: 0%"></div>
-                                </div>
                                 <div class="rating-stars-small">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -187,11 +279,12 @@
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                 </div>
+                                <div class="rating-bar">
+                                    <div class="rating-bar-fill" style="width: 0%"></div>
+                                </div>
+                                <span>0%</span>
                             </div>
                             <div class="rating-bar-item">
-                                <div class="rating-bar">
-                                    <div class="rating-bar-fill" style="width: 0%"></div>
-                                </div>
                                 <div class="rating-stars-small">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -199,11 +292,12 @@
                                     <i class="fas fa-star"></i>
                                     <i class="far fa-star"></i>
                                 </div>
+                                <div class="rating-bar">
+                                    <div class="rating-bar-fill" style="width: 0%"></div>
+                                </div>
+                                <span>0%</span>
                             </div>
                             <div class="rating-bar-item">
-                                <div class="rating-bar">
-                                    <div class="rating-bar-fill" style="width: 0%"></div>
-                                </div>
                                 <div class="rating-stars-small">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -211,11 +305,12 @@
                                     <i class="far fa-star"></i>
                                     <i class="far fa-star"></i>
                                 </div>
+                                <div class="rating-bar">
+                                    <div class="rating-bar-fill" style="width: 0%"></div>
+                                </div>
+                                <span>0%</span>
                             </div>
                             <div class="rating-bar-item">
-                                <div class="rating-bar">
-                                    <div class="rating-bar-fill" style="width: 0%"></div>
-                                </div>
                                 <div class="rating-stars-small">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -223,11 +318,12 @@
                                     <i class="far fa-star"></i>
                                     <i class="far fa-star"></i>
                                 </div>
+                                <div class="rating-bar">
+                                    <div class="rating-bar-fill" style="width: 0%"></div>
+                                </div>
+                                <span>0%</span>
                             </div>
                             <div class="rating-bar-item">
-                                <div class="rating-bar">
-                                    <div class="rating-bar-fill" style="width: 0%"></div>
-                                </div>
                                 <div class="rating-stars-small">
                                     <i class="fas fa-star"></i>
                                     <i class="far fa-star"></i>
@@ -235,27 +331,77 @@
                                     <i class="far fa-star"></i>
                                     <i class="far fa-star"></i>
                                 </div>
+                                <div class="rating-bar">
+                                    <div class="rating-bar-fill" style="width: 0%"></div>
+                                </div>
+                                <span>0%</span>
                             </div>
                         </div>
                     </div>
 
+                    <!-- Reviews List -->
                     <div class="reviews-section">
                         <div class="reviews-header">
-                            <h4>Reviews</h4>
+                            <h4>Avis</h4>
                             <select class="reviews-filter">
-                                <option>All Ratings</option>
+                                <option>Tous les avis</option>
+                                <option>5 étoiles</option>
+                                <option>4 étoiles</option>
+                                <option>3 étoiles</option>
+                                <option>2 étoiles</option>
+                                <option>1 étoile</option>
                             </select>
                         </div>
-                        <p class="no-reviews">No Reviews found</p>
+                        <p class="no-reviews">Aucun avis pour le moment. Soyez le premier à évaluer ce module !</p>
                     </div>
                 </section>
+
+                <!-- Navigation buttons -->
+                <div class="course-navigation">
+                    <a href="ateliers.html" class="btn-secondary">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Retour aux ateliers</span>
+                    </a>
+                    <a href="#section2" class="btn-primary">
+                        <span>Section suivante</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
         </main>
     </div>
 
     <!-- Scroll to top button -->
-    <button class="scroll-top">
-        <i class="fas fa-chevron-up"></i>
+    <button class="scroll-top" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
     </button>
+
+    <!-- Script pour sidebar toggle -->
+    <script>
+        // Sidebar section toggle
+        const sidebarSections = document.querySelectorAll('.sidebar-section-btn');
+
+        sidebarSections.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const section = btn.parentElement;
+                section.classList.toggle('active');
+            });
+        });
+
+        // Scroll to top button
+        const scrollTopBtn = document.querySelector('.scroll-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.style.display = 'flex';
+            } else {
+                scrollTopBtn.style.display = 'none';
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>

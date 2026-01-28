@@ -3,101 +3,508 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cap Santé - Accueil</title>
+    <title>Cap Santé - Plateforme d'Éducation Thérapeutique</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Font Awesome pour les icônes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- HEADER -->
+    <!-- HEADER AMÉLIORÉ -->
     <header class="header">
         <div class="header-container">
             <!-- Logo -->
-            <div class="logo">
-                <div class="logo-circle"></div>
-                <div class="logo-text">
-                    <span class="logo-cap">CAP</span>
-                    <span class="logo-sante">SANTÉ</span>
-                </div>
-            </div>
-            
-            <!-- Navigation -->
-            <nav class="nav">
-                <a href="index.html" class="nav-link active">Home</a>
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo-cap-sante.png" alt="Cap Santé - Retour à l'accueil" class="logo-img">
+            </a>
+
+            <!-- Navigation principale -->
+            <nav class="nav" aria-label="Navigation principale">
+                <a href="index.html" class="nav-link active" aria-current="page">
+                    <i class="fas fa-home"></i>
+                    <span>Accueil</span>
+                </a>
+                <a href="ateliers.html" class="nav-link">
+                    <i class="fas fa-book-open"></i>
+                    <span>Mes programmes</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Aide</span>
+                </a>
             </nav>
-            
-            <!-- User section -->
+
+            <!-- Section utilisateur -->
             <div class="user-section">
-                <button class="lang-btn">
-                    <i class="fas fa-globe"></i> English (en)
+                <button class="icon-btn" aria-label="Changer la langue">
+                    <i class="fas fa-globe"></i>
                 </button>
-                <button class="login-btn">
-                    <i class="fas fa-user"></i> Log in
-                </button>
+                <div class="user-profile">
+                    <span class="user-avatar">P</span>
+                    <span class="user-name">Pierre D.</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION AMÉLIORÉE -->
     <section class="hero">
+        <img src="assets/images/hero-image.jpg" alt="" class="hero-bg-image" role="presentation">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="hero-title">BIENVENUE</h1>
-            <p class="hero-subtitle">Vous êtes sur Cap Santé, votre plateforme<br>d'éducation thérapeutique.</p>
-            <a href="ateliers.html" class="btn-primary">Accéder à mes ateliers</a>
+            <div class="hero-badge">
+                <i class="fas fa-heartbeat"></i>
+                <span>Éducation thérapeutique</span>
+            </div>
+            <h1 class="hero-title">Bienvenue sur Cap Santé</h1>
+            <p class="hero-subtitle">Votre plateforme d'accompagnement personnalisé<br>pour mieux comprendre et gérer votre santé au quotidien.</p>
+            <div class="hero-cta">
+                <a href="ateliers.html" class="btn-primary">
+                    <span>Accéder à mon programme</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#cap-sante" class="btn-secondary">
+                    <span>En savoir plus</span>
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- CAP SANTÉ SECTION -->
-    <section class="cap-sante-section">
+    <!-- CAROUSEL ACTUALITÉS -->
+    <section class="news-carousel-section">
         <div class="container">
-            <h2 class="section-title">Cap Santé</h2>
+            <div class="news-carousel">
+                <div class="news-carousel-track">
+                    <div class="news-item news-item-active">
+                        <div class="news-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-badge">Nouveau</span>
+                            <h3 class="news-title">Programme Schizophrénie disponible</h3>
+                            <p class="news-text">Un nouveau programme d'accompagnement pour les patients atteints de schizophrénie est maintenant accessible sur la plateforme.</p>
+                            <a href="#" class="news-link">Découvrir <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-badge">Mise à jour</span>
+                            <h3 class="news-title">Nouveaux contenus disponibles</h3>
+                            <p class="news-text">Les programmes Diabète et HTA s'enrichissent de nouveaux modules interactifs et vidéos pédagogiques.</p>
+                            <a href="#" class="news-link">Voir les nouveautés <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="news-content">
+                            <span class="news-badge">Information</span>
+                            <h3 class="news-title">Témoignages de patients</h3>
+                            <p class="news-text">Découvrez les retours d'expérience de patients qui ont suivi nos programmes d'éducation thérapeutique.</p>
+                            <a href="#" class="news-link">Lire les témoignages <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn carousel-prev" aria-label="Actualité précédente">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-dots">
+                        <button class="carousel-dot active" aria-label="Actualité 1"></button>
+                        <button class="carousel-dot" aria-label="Actualité 2"></button>
+                        <button class="carousel-dot" aria-label="Actualité 3"></button>
+                    </div>
+                    <button class="carousel-btn carousel-next" aria-label="Actualité suivante">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- SECTION CAP SANTÉ AMÉLIORÉE -->
+    <section class="cap-sante-section" id="cap-sante">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Qu'est-ce que Cap Santé ?</h2>
+                <p class="section-subtitle">Une plateforme innovante pour vous accompagner dans votre parcours de santé</p>
+            </div>
+
+            <div class="cap-sante-content">
+                <!-- Card Mission -->
+                <div class="info-card info-card-primary">
+                    <div class="info-card-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 class="info-card-title">Notre mission</h3>
+                    <p class="footer-description">Plateforme d'éducation thérapeutique du CHU de Bordeaux. Contenus validés par nos experts médicaux pour vous accompagner dans votre parcours de santé.</p>
+                  </div>
+
+                <!-- Card Pour qui -->
+                <div class="info-card info-card-secondary">
+                    <div class="info-card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="info-card-title">À qui s'adresse Cap Santé ?</h3>
+                    <ul class="info-card-list">
+                        <li><i class="fas fa-check"></i> Personnes atteintes de maladies chroniques</li>
+                        <li><i class="fas fa-check"></i> Personnes souhaitant préserver leur santé</li>
+                        <li><i class="fas fa-check"></i> Accompagnement personnalisé et validé</li>
+                    </ul>
+                </div>
+
+                <!-- Card Avantages -->
+                <div class="info-card info-card-accent">
+                    <div class="info-card-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="info-card-title">Vos avantages</h3>
+                    <ul class="info-card-list">
+                        <li><i class="fas fa-check"></i> Contenus validés par des experts du CHU</li>
+                        <li><i class="fas fa-check"></i> Apprentissage à votre rythme</li>
+                        <li><i class="fas fa-check"></i> Accessible 24h/24 depuis chez vous</li>
+                        <li><i class="fas fa-check"></i> Intégré à votre parcours de soins</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Call to action -->
+            <div class="cta-box">
+                <div class="cta-content">
+                    <i class="fas fa-comments"></i>
+                    <div>
+                        <h3>Parlons-en ensemble</h3>
+                        <p>Ces programmes s'intègrent dans votre parcours de soins. N'hésitez pas à en discuter avec votre équipe soignante.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION PROGRAMMES DISPONIBLES -->
+    <section class="programs-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nos programmes d'accompagnement</h2>
+                <p class="section-subtitle">Des parcours d'éducation thérapeutique adaptés à chaque pathologie</p>
+            </div>
+
+            <div class="programs-grid">
+                <!-- Programme Diabète -->
+                <div class="program-card">
+                    <div class="program-card-header program-diabetes">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="program-card-body">
+                        <h3 class="program-card-title">Diabète</h3>
+                        <p class="program-card-desc">Comprendre et gérer votre diabète au quotidien : alimentation, surveillance, traitements.</p>
+                        <div class="program-card-meta">
+                            <span><i class="fas fa-book"></i> 8 modules</span>
+                            <span><i class="fas fa-clock"></i> ~4h</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programme HTA -->
+                <div class="program-card">
+                    <div class="program-card-header program-hta">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="program-card-body">
+                        <h3 class="program-card-title">Hypertension artérielle</h3>
+                        <p class="program-card-desc">Maîtriser votre tension artérielle : mesure, hygiène de vie, traitement.</p>
+                        <div class="program-card-meta">
+                            <span><i class="fas fa-book"></i> 6 modules</span>
+                            <span><i class="fas fa-clock"></i> ~3h</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programme Borderline -->
+                <div class="program-card">
+                    <div class="program-card-header program-mental">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="program-card-body">
+                        <h3 class="program-card-title">Trouble Borderline</h3>
+                        <p class="program-card-desc">Comprendre et gérer les émotions : outils pratiques et stratégies d'adaptation.</p>
+                        <div class="program-card-meta">
+                            <span><i class="fas fa-book"></i> 10 modules</span>
+                            <span><i class="fas fa-clock"></i> ~5h</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programme Schizophrénie -->
+                <div class="program-card program-card-new">
+                    <div class="program-card-badge">Nouveau</div>
+                    <div class="program-card-header program-mental">
+                        <i class="fas fa-head-side-virus"></i>
+                    </div>
+                    <div class="program-card-body">
+                        <h3 class="program-card-title">Schizophrénie</h3>
+                        <p class="program-card-desc">Vivre avec la schizophrénie : reconnaître les symptômes, adhérer au traitement.</p>
+                        <div class="program-card-meta">
+                            <span><i class="fas fa-book"></i> 12 modules</span>
+                            <span><i class="fas fa-clock"></i> ~6h</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programme Asthme -->
+                <div class="program-card">
+                    <div class="program-card-header program-respiratory">
+                        <i class="fas fa-lungs"></i>
+                    </div>
+                    <div class="program-card-body">
+                        <h3 class="program-card-title">Asthme</h3>
+                        <p class="program-card-desc">Contrôler votre asthme : reconnaître les crises, utiliser vos traitements.</p>
+                        <div class="program-card-meta">
+                            <span><i class="fas fa-book"></i> 7 modules</span>
+                            <span><i class="fas fa-clock"></i> ~3h30</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programme Insuffisance cardiaque -->
+                <div class="program-card">
+                    <div class="program-card-header program-cardio">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="program-card-body">
+                        <h3 class="program-card-title">Insuffisance cardiaque</h3>
+                        <p class="program-card-desc">Surveiller et adapter votre mode de vie : signes d'alerte, activité physique.</p>
+                        <div class="program-card-meta">
+                            <span><i class="fas fa-book"></i> 9 modules</span>
+                            <span><i class="fas fa-clock"></i> ~4h30</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programme BPCO -->
+                <div class="program-card">
+                    <div class="program-card-header program-respiratory">
+                        <i class="fas fa-lungs-virus"></i>
+                    </div>
+                    <div class="program-card-body">
+                        <h3 class="program-card-title">BPCO</h3>
+                        <p class="program-card-desc">Broncho-pneumopathie : respirer mieux, gérer l'essoufflement, éviter les crises.</p>
+                        <div class="program-card-meta">
+                            <span><i class="fas fa-book"></i> 8 modules</span>
+                            <span><i class="fas fa-clock"></i> ~4h</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programme Arthrite -->
+                <div class="program-card">
+                    <div class="program-card-header program-rheumatology">
+                        <i class="fas fa-bone"></i>
+                    </div>
+                    <div class="program-card-body">
+                        <h3 class="program-card-title">Arthrite rhumatoïde</h3>
+                        <p class="program-card-desc">Soulager les douleurs articulaires : exercices, traitements, adaptation quotidienne.</p>
+                        <div class="program-card-meta">
+                            <span><i class="fas fa-book"></i> 7 modules</span>
+                            <span><i class="fas fa-clock"></i> ~3h30</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programme Dépression -->
+                <div class="program-card">
+                    <div class="program-card-header program-mental">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <div class="program-card-body">
+                        <h3 class="program-card-title">Dépression</h3>
+                        <p class="program-card-desc">Comprendre et sortir de la dépression : reconnaître les signaux, trouver du soutien.</p>
+                        <div class="program-card-meta">
+                            <span><i class="fas fa-book"></i> 10 modules</span>
+                            <span><i class="fas fa-clock"></i> ~5h</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Programme Obésité -->
+                <div class="program-card">
+                    <div class="program-card-header program-nutrition">
+                        <i class="fas fa-weight"></i>
+                    </div>
+                    <div class="program-card-body">
+                        <h3 class="program-card-title">Obésité & nutrition</h3>
+                        <p class="program-card-desc">Adopter une alimentation équilibrée : comprendre les besoins, retrouver le plaisir.</p>
+                        <div class="program-card-meta">
+                            <span><i class="fas fa-book"></i> 9 modules</span>
+                            <span><i class="fas fa-clock"></i> ~4h30</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bouton Voir plus -->
+            <div class="programs-show-more">
+                <button class="btn-show-more" id="showMoreBtn" onclick="showMorePrograms()">
+                    <span>Voir tous les programmes</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+            <!-- Note d'information -->
+            <div class="programs-note">
+                <i class="fas fa-info-circle"></i>
+                <p><strong>Information :</strong> Votre programme d'accompagnement est défini avec votre équipe soignante selon vos besoins spécifiques. Une fois connecté, vous aurez accès au programme validé pour vous.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER AMÉLIORÉ -->
     <footer class="footer">
         <div class="footer-container">
-            <!-- Colonne gauche : Description -->
-            <div class="footer-col footer-description">
-                <h3 class="footer-title">CAP SANTÉ</h3>
-                <p>Cap Santé est une plateforme numérique d'e-prévention et e-éducation conçue par le CHU de Bordeaux, hébergeant des contenus en ligne d'éducation pour la santé et d'éducation thérapeutique (ETP) validés par des spécialistes.</p>
-                <p>Son objectif est d'aider les personnes à acquérir des compétences pour gérer leur santé tout au long de la vie.</p>
-                <p>Les e-programmes éducatifs présents dans Cap Santé sont proposés :</p>
-                <ul class="footer-list">
-                    <li>Aux personnes atteintes de maladies chroniques</li>
-                    <li>À toutes les personnes souhaitant préserver leur santé</li>
-                    <li>Ils aident les personnes à :</li>
-                    <li>Développer des comportements adaptés dans leur quotidien</li>
-                    <li>Réduire les risques pour la santé.</li>
-                </ul>
-                <p>Avec Cap Santé, vous avez accès à l'expertise du CHU de Bordeaux, de ses équipes médicales et soignantes et d'experts en pédagogie pour favoriser votre santé physique et psychique et l'autonomie des patients.</p>
-                <p>Ces e-programmes s'intègrent dans votre parcours de soins, nous vous conseillons d'en parler avec vos soignants !</p>
-                
+            <!-- Colonne principale -->
+            <div class="footer-col footer-main">
+                <div class="footer-logo-section">
+                    <h3 class="footer-brand">CAP SANTÉ</h3>
+                    <p class="footer-tagline">Votre santé, notre engagement</p>
+                </div>
+
+                <p class="footer-description">Cap Santé est une plateforme numérique d'éducation thérapeutique développée par le CHU de Bordeaux. Nos contenus, validés par des experts médicaux, vous aident à développer des compétences pour mieux gérer votre santé au quotidien.</p>
+
                 <!-- Logo CHU -->
-                <div class="footer-logo">
+                <div class="footer-chu-logo">
                     <div class="chu-logo">
                         <div class="chu-logo-box">CHU</div>
                         <div class="chu-logo-text">
                             <span>Hôpitaux</span>
                             <span>Universitaires</span>
+                            <span class="chu-logo-city">de Bordeaux</span>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Colonne droite : Contact -->
-            <div class="footer-col footer-contact">
-                <h3 class="footer-title">Un problème ? Contactez nous !</h3>
-                <a href="mailto:capsante@chu-bordeaux.fr" class="footer-email">capsante@chu-bordeaux.fr</a>
+
+            <!-- Colonne navigation -->
+            <div class="footer-col footer-links">
+                <h4 class="footer-col-title">Navigation</h4>
+                <ul class="footer-nav">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="ateliers.html">Mes programmes</a></li>
+                    <li><a href="#">Aide & FAQ</a></li>
+                    <li><a href="#">Accessibilité</a></li>
+                </ul>
+            </div>
+
+            <!-- Colonne contact -->
+            <div class="footer-col footer-contact-col">
+                <h4 class="footer-col-title">Besoin d'aide ?</h4>
+                <div class="footer-contact-info">
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <p class="footer-contact-label">Email</p>
+                            <a href="mailto:capsante@chu-bordeaux.fr" class="footer-contact-link">capsante@chu-bordeaux.fr</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <p class="footer-contact-label">Assistance technique</p>
+                            <p class="footer-contact-text">Du lundi au vendredi, 9h-17h</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        
-        <!-- Liens légaux -->
+
+        <!-- Ligne du bas -->
         <div class="footer-bottom">
-            <a href="#" class="footer-link">Privacy Policy</a>
-            <a href="#" class="footer-link">Terms & Conditions</a>
+            <p class="footer-copyright">&copy; 2025 CHU de Bordeaux - Tous droits réservés</p>
+            <div class="footer-legal-links">
+                <a href="#">Mentions légales</a>
+                <a href="#">Politique de confidentialité</a>
+                <a href="#">Conditions d'utilisation</a>
+            </div>
         </div>
     </footer>
+
+    <!-- Script carousel simple -->
+    <script>
+        // Carousel simple et accessible
+        const track = document.querySelector('.news-carousel-track');
+        const items = document.querySelectorAll('.news-item');
+        const dots = document.querySelectorAll('.carousel-dot');
+        const prevBtn = document.querySelector('.carousel-prev');
+        const nextBtn = document.querySelector('.carousel-next');
+
+        let currentIndex = 0;
+        const totalItems = items.length;
+
+        function updateCarousel(index) {
+            // Retirer les classes actives
+            items.forEach(item => item.classList.remove('news-item-active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            // Ajouter les classes actives
+            items[index].classList.add('news-item-active');
+            dots[index].classList.add('active');
+
+            // Déplacer le carousel
+            const offset = -index * 100;
+            track.style.transform = `translateX(${offset}%)`;
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalItems;
+            updateCarousel(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+            updateCarousel(currentIndex);
+        }
+
+        // Event listeners
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                updateCarousel(currentIndex);
+            });
+        });
+
+        // Auto-play (optionnel, peut être désactivé)
+        let autoplayInterval = setInterval(nextSlide, 10000);
+
+        // Pause au survol
+        const carousel = document.querySelector('.news-carousel');
+        carousel.addEventListener('mouseenter', () => {
+            clearInterval(autoplayInterval);
+        });
+        carousel.addEventListener('mouseleave', () => {
+            autoplayInterval = setInterval(nextSlide, 6000);
+        });
+        // Fonction Show More Programs
+        function showMorePrograms() {
+            const cards = document.querySelectorAll('.program-card');
+            const btn = document.getElementById('showMoreBtn');
+
+            cards.forEach((card, index) => {
+                if (index >= 6) {
+                    card.style.display = 'block';
+                }
+            });
+
+            btn.style.display = 'none';
+        }
+    </script>
 </body>
 </html>
