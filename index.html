@@ -19,7 +19,7 @@
             <!-- Logo -->
             <a href="index.html" class="logo">
                 <img src="assets/images/logo-cap-sante.png" alt="Cap Santé - Retour à l'accueil" class="logo-img">
-            </a>
+              </a>
 
             <!-- Navigation principale -->
             <nav class="nav" aria-label="Navigation principale">
@@ -53,8 +53,8 @@
 
     <!-- HERO SECTION AMÉLIORÉE -->
     <section class="hero">
-        <img src="assets/images/hero-image.jpg" alt="" class="hero-bg-image" role="presentation">
-        <div class="hero-overlay"></div>
+      
+
         <div class="hero-content">
             <div class="hero-badge">
                 <i class="fas fa-heartbeat"></i>
@@ -145,8 +145,8 @@
                         <i class="fas fa-bullseye"></i>
                     </div>
                     <h3 class="info-card-title">Notre mission</h3>
-                    <p class="footer-description">Plateforme d'éducation thérapeutique du CHU de Bordeaux. Contenus validés par nos experts médicaux pour vous accompagner dans votre parcours de santé.</p>
-                  </div>
+                    <p class="info-card-text">Cap Santé est une plateforme d'e-éducation thérapeutique développée par le CHU de Bordeaux. Notre objectif : vous aider à acquérir des compétences pour mieux gérer votre santé tout au long de votre vie.</p>
+                </div>
 
                 <!-- Card Pour qui -->
                 <div class="info-card info-card-secondary">
@@ -185,6 +185,25 @@
                         <p>Ces programmes s'intègrent dans votre parcours de soins. N'hésitez pas à en discuter avec votre équipe soignante.</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA ACCÈS PROGRAMME -->
+    <section class="cta-access-section">
+        <div class="container">
+            <div class="cta-access-card">
+                <div class="cta-access-icon">
+                    <i class="fas fa-user-check"></i>
+                </div>
+                <div class="cta-access-content">
+                    <h2>Vous êtes déjà inscrit ?</h2>
+                    <p>Accédez directement à votre programme d'accompagnement personnalisé validé par votre équipe soignante.</p>
+                </div>
+                <a href="ateliers.html" class="btn-primary-large">
+                    <span>Accéder à mon espace</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -357,6 +376,7 @@
                     <i class="fas fa-chevron-down"></i>
                 </button>
             </div>
+
             <!-- Note d'information -->
             <div class="programs-note">
                 <i class="fas fa-info-circle"></i>
@@ -375,7 +395,7 @@
                     <p class="footer-tagline">Votre santé, notre engagement</p>
                 </div>
 
-                <p class="footer-description">Cap Santé est une plateforme numérique d'éducation thérapeutique développée par le CHU de Bordeaux. Nos contenus, validés par des experts médicaux, vous aident à développer des compétences pour mieux gérer votre santé au quotidien.</p>
+                <p class="footer-description">Plateforme d'éducation thérapeutique du CHU de Bordeaux. Contenus validés par nos experts médicaux pour vous accompagner dans votre parcours de santé.</p>
 
                 <!-- Logo CHU -->
                 <div class="footer-chu-logo">
@@ -481,7 +501,7 @@
             });
         });
 
-        // Auto-play (optionnel, peut être désactivé)
+        // Auto-play ralenti à 10 secondes
         let autoplayInterval = setInterval(nextSlide, 10000);
 
         // Pause au survol
@@ -490,8 +510,9 @@
             clearInterval(autoplayInterval);
         });
         carousel.addEventListener('mouseleave', () => {
-            autoplayInterval = setInterval(nextSlide, 6000);
+            autoplayInterval = setInterval(nextSlide, 10000);
         });
+
         // Fonction Show More Programs
         function showMorePrograms() {
             const cards = document.querySelectorAll('.program-card');
