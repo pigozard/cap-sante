@@ -306,12 +306,16 @@ body {
     text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.3);
     max-width: 600px;
     font-weight: 400;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-cta {
     display: flex;
     gap: var(--spacing-md);
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .btn-primary {
