@@ -53,7 +53,7 @@
 
     <!-- HERO SECTION AMÉLIORÉE -->
     <section class="hero">
-        
+
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="hero-badge">
@@ -78,6 +78,11 @@
     <section class="news-carousel-section">
         <div class="container">
             <div class="news-carousel">
+              <button class="carousel-pause"
+            aria-label="Mettre en pause le défilement automatique">
+        <i class="fas fa-pause"></i>
+    </button>
+
                 <div class="news-carousel-track">
                     <div class="news-item news-item-active">
                         <div class="news-icon">
@@ -118,9 +123,16 @@
                         <i class="fas fa-chevron-left"></i>
                     </button>
                     <div class="carousel-dots">
-                        <button class="carousel-dot active" aria-label="Actualité 1"></button>
-                        <button class="carousel-dot" aria-label="Actualité 2"></button>
-                        <button class="carousel-dot" aria-label="Actualité 3"></button>
+                        <button class="carousel-dot"
+        aria-label="Aller à l'actualité 1"
+        aria-current="true"
+        data-slide="0"></button>
+<button class="carousel-dot"
+        aria-label="Aller à l'actualité 2"
+        data-slide="1"></button>
+<button class="carousel-dot"
+        aria-label="Aller à l'actualité 3"
+        data-slide="2"></button>
                     </div>
                     <button class="carousel-btn carousel-next" aria-label="Actualité suivante">
                         <i class="fas fa-chevron-right"></i>
@@ -145,7 +157,7 @@
                         <i class="fas fa-bullseye"></i>
                     </div>
                     <h3 class="info-card-title">Notre mission</h3>
-                    <p class="info-card-text">Cap Santé est une plateforme d'e-éducation thérapeutique développée par le CHU de Bordeaux. Notre objectif : vous aider à acquérir des compétences pour mieux gérer votre santé tout au long de votre vie.</p>
+                    <p class="info-card-text">Cap Santé est une plateforme d'e-éducation thérapeutique développée par l'UTTEP 33'. Notre objectif : vous aider à acquérir des compétences pour mieux gérer votre santé tout au long de votre vie.</p>
                 </div>
 
                 <!-- Card Pour qui -->
@@ -168,7 +180,7 @@
                     </div>
                     <h3 class="info-card-title">Vos avantages</h3>
                     <ul class="info-card-list">
-                        <li><i class="fas fa-check"></i> Contenus validés par des experts du CHU</li>
+                        <li><i class="fas fa-check"></i> Contenus validés par des experts</li>
                         <li><i class="fas fa-check"></i> Apprentissage à votre rythme</li>
                         <li><i class="fas fa-check"></i> Accessible 24h/24 depuis chez vous</li>
                         <li><i class="fas fa-check"></i> Intégré à votre parcours de soins</li>
@@ -182,7 +194,7 @@
                     <i class="fas fa-comments"></i>
                     <div>
                         <h3>Parlons-en ensemble</h3>
-                        <p>Ces programmes s'intègrent dans votre parcours de soins. N'hésitez pas à en discuter avec votre équipe soignante.</p>
+                        <p>Ces programmes s'intègrent dans votre parcours de soins. N'hésitez pas à en discuter avec votre équipe soignante pour en bénéficier.</p>
                     </div>
                 </div>
             </div>
@@ -394,31 +406,6 @@
                     <h3 class="footer-brand">CAP SANTÉ</h3>
                     <p class="footer-tagline">Votre santé, notre engagement</p>
                 </div>
-
-                <p class="footer-description">Plateforme d'éducation thérapeutique du CHU de Bordeaux. Contenus validés par nos experts médicaux pour vous accompagner dans votre parcours de santé.</p>
-
-                <!-- Logo CHU -->
-                <div class="footer-chu-logo">
-                    <div class="chu-logo">
-                        <div class="chu-logo-box">CHU</div>
-                        <div class="chu-logo-text">
-                            <span>Hôpitaux</span>
-                            <span>Universitaires</span>
-                            <span class="chu-logo-city">de Bordeaux</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Colonne navigation -->
-            <div class="footer-col footer-links">
-                <h4 class="footer-col-title">Navigation</h4>
-                <ul class="footer-nav">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="ateliers.html">Mes programmes</a></li>
-                    <li><a href="#">Aide & FAQ</a></li>
-                    <li><a href="#">Accessibilité</a></li>
-                </ul>
             </div>
 
             <!-- Colonne contact -->
@@ -429,14 +416,14 @@
                         <i class="fas fa-envelope"></i>
                         <div>
                             <p class="footer-contact-label">Email</p>
-                            <a href="mailto:capsante@chu-bordeaux.fr" class="footer-contact-link">capsante@chu-bordeaux.fr</a>
+                            <a href="mailto:capsante@chu-bordeaux.fr" class="footer-contact-link">uttep33@chu-bordeaux.fr</a>
                         </div>
                     </div>
                     <div class="footer-contact-item">
                         <i class="fas fa-phone"></i>
                         <div>
-                            <p class="footer-contact-label">Assistance technique</p>
-                            <p class="footer-contact-text">Du lundi au vendredi, 9h-17h</p>
+
+                            <p class="footer-contact-text">05.24.54.93.63</p>
                         </div>
                     </div>
                 </div>
@@ -445,7 +432,7 @@
 
         <!-- Ligne du bas -->
         <div class="footer-bottom">
-            <p class="footer-copyright">&copy; 2025 CHU de Bordeaux - Tous droits réservés</p>
+            <p class="footer-copyright">&copy; 2026 CHU de Bordeaux - Tous droits réservés</p>
             <div class="footer-legal-links">
                 <a href="#">Mentions légales</a>
                 <a href="#">Politique de confidentialité</a>
@@ -501,8 +488,28 @@
             });
         });
 
-        // Auto-play ralenti à 10 secondes
-        let autoplayInterval = setInterval(nextSlide, 10000);
+      // Auto-play ralenti à 15 secondes
+let autoplayInterval = setInterval(nextSlide, 15000);
+
+// Gestion du bouton pause
+const pauseBtn = document.querySelector('.carousel-pause');
+let isPaused = false;
+
+if (pauseBtn) {
+    pauseBtn.addEventListener('click', function() {
+        isPaused = !isPaused;
+
+        if (isPaused) {
+            clearInterval(autoplayInterval);
+            this.innerHTML = '<i class="fas fa-play"></i>';
+            this.setAttribute('aria-label', 'Reprendre le défilement automatique');
+        } else {
+            autoplayInterval = setInterval(nextSlide, 15000);
+            this.innerHTML = '<i class="fas fa-pause"></i>';
+            this.setAttribute('aria-label', 'Mettre en pause le défilement automatique');
+        }
+    });
+}
 
         // Pause au survol
         const carousel = document.querySelector('.news-carousel');
@@ -527,5 +534,6 @@
             btn.style.display = 'none';
         }
     </script>
+    <script src="ajouts.js"></script>
 </body>
 </html>

@@ -45,7 +45,21 @@
                 </div>
             </div>
         </div>
+
     </header>
+    </header>
+
+<!-- AJOUTER ICI -->
+<nav aria-label="Fil d'Ariane" class="breadcrumb">
+    <div class="container">
+        <ol class="breadcrumb-list">
+            <li><a href="index.html">Accueil</a></li>
+            <li aria-current="page">Mon programme</li>
+        </ol>
+    </div>
+</nav>
+
+<main class="main-content dashboard-content">
 
     <!-- COURSE LAYOUT -->
     <div class="course-layout">
@@ -362,14 +376,53 @@
                         <i class="fas fa-arrow-left"></i>
                         <span>Retour aux ateliers</span>
                     </a>
-                    <a href="#section2" class="btn-primary">
-                        <span>Section suivante</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
+
                 </div>
             </div>
         </main>
     </div>
+      <!-- FOOTER AMÉLIORÉ -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Colonne principale -->
+            <div class="footer-col footer-main">
+                <div class="footer-logo-section">
+                    <h3 class="footer-brand">CAP SANTÉ</h3>
+                    <p class="footer-tagline">Votre santé, notre engagement</p>
+                </div>
+            </div>
+
+            <!-- Colonne contact -->
+            <div class="footer-col footer-contact-col">
+                <h4 class="footer-col-title">Besoin d'aide ?</h4>
+                <div class="footer-contact-info">
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <p class="footer-contact-label">Email</p>
+                            <a href="mailto:capsante@chu-bordeaux.fr" class="footer-contact-link">uttep33@chu-bordeaux.fr</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+
+                            <p class="footer-contact-text">05.24.54.93.63</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ligne du bas -->
+        <div class="footer-bottom">
+            <p class="footer-copyright">&copy; 2026 CHU de Bordeaux - Tous droits réservés</p>
+            <div class="footer-legal-links">
+                <a href="#">Mentions légales</a>
+                <a href="#">Politique de confidentialité</a>
+                <a href="#">Conditions d'utilisation</a>
+            </div>
+        </div>
 
     <!-- Scroll to top button -->
     <button class="scroll-top" aria-label="Retour en haut">
@@ -403,5 +456,6 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
+    <script src="ajouts.js"></script>
 </body>
 </html>

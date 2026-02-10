@@ -1,0 +1,205 @@
+// ========================================
+// À AJOUTER DANS UN FICHIER ajouts.js
+// Puis inclure avec <script src="ajouts.js"></script> avant </body>
+// ========================================
+
+document.addEventListener('DOMContentLoaded', function() {
+
+   
+
+
+    // ========================================
+    // 2. SIDEBAR COLLAPSIBLE (pour cours.html)
+    // ========================================
+
+    const sidebarSections = document.querySelectorAll('.sidebar-section');
+
+    sidebarSections.forEach(section => {
+        const btn = section.querySelector('.sidebar-section-btn');
+        const content = section.querySelector('.sidebar-section-content');
+
+        if (!btn || !content) return;
+
+        // Set initial state
+        const isExpanded = section.classList.contains('active');
+        btn.setAttribute('aria-expanded', isExpanded);
+
+        btn.addEventListener('click', function() {
+            const isCurrentlyExpanded = this.getAttribute('aria-expanded') === 'true';
+
+            // Toggle
+            this.setAttribute('aria-expanded', !isCurrentlyExpanded);
+
+            // Toggle class pour rotation chevron
+            section.classList.toggle('active');
+        });
+    });
+
+
+    // ========================================
+    // 3. FONCTION SHOW MORE PROGRAMS
+    // ========================================
+
+    window.showMorePrograms = function() {
+        const cards = document.querySelectorAll('.program-card');
+        const btn = document.getElementById('showMoreBtn');
+
+        if (!cards.length || !btn) return;
+
+        // Montrer les cards cachées avec animation
+        cards.forEach((card, index) => {
+            if (index >= 6) {
+                card.style.display = 'block';
+                // Animation d'apparition
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, (index - 6) * 50);
+            }
+        });
+
+        // Cacher le bouton
+        btn.style.display = 'none';
+    };
+
+
+    // ========================================
+    // 4. SMOOTH SCROLL pour les ancres
+    // ========================================
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+
+            if (targetId === '#') return;
+
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                e.preventDefault();
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+
+    // ========================================
+    // 5. FONCTION UTILITAIRE - Afficher message
+    // ========================================
+
+    window.showMessage = function(type, title, text, duration = 5000) {
+        // Créer le message
+        const message = document.createElement('div');
+        message.className = `message message-${type}`;
+        message.innerHTML = `
+            <i class="fas fa-${getIcon(type)} message-icon"></i>
+            <div class="message-content">
+                <strong>${title}</strong>
+                ${text ? `<p>${text}</p>` : ''}
+            </div>
+        `;
+
+        // Insérer au début du main content
+        const mainContent = document.querySelector('main') || document.body;
+        mainContent.insertBefore(message, mainContent.firstChild);
+
+        // Auto-remove après durée
+        if (duration > 0) {
+            setTimeout(() => {
+                message.style.opacity = '0';
+                setTimeout(() => message.remove(), 300);
+            }, duration);
+        }
+
+        return message;
+    };
+
+    function getIcon(type) {
+        const icons = {
+            'success': 'check-circle',
+            'error': 'exclamation-circle',
+            'warning': 'exclamation-triangle',
+            'info': 'info-circle'
+        };
+        return icons[type] || 'info-circle';
+    }
+
+
+    // ========================================
+    // 6. LOADING STATE - Pour démo d'interactions
+    // ========================================
+
+    window.showLoading = function(element) {
+        element.classList.add('loading');
+        element.setAttribute('aria-busy', 'true');
+        if (element.tagName === 'BUTTON') {
+            element.disabled = true;
+        }
+    };
+
+    window.hideLoading = function(element) {
+        element.classList.remove('loading');
+        element.setAttribute('aria-busy', 'false');
+        if (element.tagName === 'BUTTON') {
+            element.disabled = false;
+        }
+    };
+
+
+    // ========================================
+    // 7. EXEMPLE D'UTILISATION - Messages au clic sur programme
+    // (À activer si tu veux montrer l'interactivité)
+    // ========================================
+
+    /*
+    const programCards = document.querySelectorAll('.program-card');
+    programCards.forEach(card => {
+        card.addEventListener('click', function() {
+            const title = this.querySelector('.program-card-title').textContent;
+            showMessage('info', 'Programme sélectionné', `Vous consultez le programme "${title}"`);
+        });
+    });
+    */
+
+});
+
+
+// ========================================
+// FONCTION GLOBALE pour démo en présentation
+// ========================================
+
+// Exemple : Simuler la complétion d'un module
+window.demoModuleComplete = function() {
+    window.showMessage(
+        'success',
+        'Module complété !',
+        'Vous avez terminé le module "Introduction". Félicitations !'
+    );
+};
+
+// Exemple : Simuler une erreur
+window.demoError = function() {
+    window.showMessage(
+        'error',
+        'Erreur de connexion',
+        'Impossible de charger le contenu. Veuillez réessayer.'
+    );
+};
+
+// Exemple : Simuler un warning
+window.demoWarning = function() {
+    window.showMessage(
+        'warning',
+        'Session bientôt expirée',
+        'Votre session expirera dans 5 minutes. Pensez à sauvegarder.'
+    );
+};
+
+console.log('✅ Améliorations Cap Santé chargées');
+console.log('💡 Fonctions disponibles pour la démo :');
+console.log('   - demoModuleComplete()');
+console.log('   - demoError()');
+console.log('   - demoWarning()');
