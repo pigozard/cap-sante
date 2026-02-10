@@ -78,6 +78,9 @@
     <section class="news-carousel-section">
         <div class="container">
             <div class="news-carousel">
+              <button class="carousel-pause" aria-label="Pause">
+        <i class="fas fa-pause"></i>
+    </button>
               <button class="carousel-pause"
             aria-label="Mettre en pause le défilement automatique">
         <i class="fas fa-pause"></i>
@@ -517,7 +520,25 @@ if (pauseBtn) {
             clearInterval(autoplayInterval);
         });
         carousel.addEventListener('mouseleave', () => {
-            autoplayInterval = setInterval(nextSlide, 10000);
+            let autoplayInterval = setInterval(nextSlide, 15000);
+window.autoplayInterval = autoplayInterval;
+window.nextSlide = nextSlide;
+
+// Bouton pause
+const pauseBtn = document.querySelector('.carousel-pause');
+let isPaused = false;
+if (pauseBtn) {
+    pauseBtn.addEventListener('click', function() {
+        isPaused = !isPaused;
+        if (isPaused) {
+            clearInterval(autoplayInterval);
+            this.innerHTML = '<i class="fas fa-play"></i>';
+        } else {
+            autoplayInterval = setInterval(nextSlide, 15000);
+            this.innerHTML = '<i class="fas fa-pause"></i>';
+        }
+    });
+}
         });
 
         // Fonction Show More Programs
